@@ -50,16 +50,10 @@ def sweet_16(data, n, c=0):
 	line = data
 	# incoming data looks like cm=99 in=13
 	kv = re.split(' ', line)
-	#print()
-	#print(kv)
 	for pair in kv:
 		n = 15
 		data_length = len(pair)
-		#my_line = "data length is " + str(data_length)
-		#print(my_line)
 		padding = n - data_length
-		#print("padding is")
-		#print(str(padding))
 		padding = int(padding)
 		padding = str(' ' * padding)
 		e = pair + ' ' +  padding
@@ -68,12 +62,6 @@ def sweet_16(data, n, c=0):
 		ser1.write(e.encode(encoding='UTF-8'))
 		to_hec(e)
 		time.sleep(.25)
-			
-
-#def f(string, n, c=0):
-#    if c < n:
-#        print(string * n)
-#        f(string, n, c=c + 1)
 
 def to_hec(data):
 	e = splunk_hec_sender.EventPreamble()
