@@ -1,6 +1,9 @@
 #!/usr/bin/python3
 
 # Send data to Splunk HEC
+# This script formats the data as syslog-style output, e.g.
+# Jun 20 19:13:34.731643 10.100.0.220 read_serial-testing.py[3573]: inches=31 cm=81
+
 
 import os
 import datetime
