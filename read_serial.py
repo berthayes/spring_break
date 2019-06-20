@@ -9,6 +9,7 @@ import smbus
 from kafka import KafkaProducer
 from kafka.errors import KafkaError
 
+# sample value for Confluent server - change for your environment
 producer = KafkaProducer(bootstrap_servers=['10.100.0.151:9092'])
 
 # The Arduino talks to the Pi over serial on USB
