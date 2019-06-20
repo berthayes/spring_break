@@ -5,7 +5,5 @@ I broke my ankle in February 2018 and spent all of Spring Break laid up on the c
 
 This is a pretty simple POC, using an arduino to send data from a distance sensor (https://www.parallax.com/product/28015) to a Raspberry Pi that can then stream data to Kafka or Splunk.  It also sends a readout of the data to a serial-controlled LCD panel, because it looks cool. https://www.sparkfun.com/products/10097
 
-(The ultimate goal was real-time GPS and telemetry from an RC six-wheeler; it worked in my truck but there was too much RF interference on top of the six-wheeler for reliable WiFi.  Sad face.)  
-
-This code sends data to Splunk's HTTP Event Collector (HEC) http://dev.splunk.com/view/event-collector/SP-CAAAE6M and sends data to Kafka using kafka-python https://kafka-python.readthedocs.io/en/master/
+The code sends data to Splunk's HTTP Event Collector (HEC) http://dev.splunk.com/view/event-collector/SP-CAAAE6M and sends data to Kafka using kafka-python https://kafka-python.readthedocs.io/en/master/
 
