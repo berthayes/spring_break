@@ -11,6 +11,7 @@ int delaylength = 3000;
 
 
 void setup() {
+  // using a serial line for output to the pi
   Serial.begin(9600);
   pinMode(5, OUTPUT);
 
@@ -26,6 +27,8 @@ void setup() {
 
 void loop(){
 }
+
+// The distance sensor code is lifted from here: https://www.arduino.cc/en/Tutorial/Ping
 
 void git_data(void)
 {
@@ -77,6 +80,9 @@ void sendData(){
 }
 
 // callback for received data
+// This is really just me playing with i2c
+// in this case, nothing happens until we give the signal from the pi
+
 void receiveData(int byteCount){
 
   while(Wire.available()) {
@@ -87,6 +93,7 @@ void receiveData(int byteCount){
     }
   }
 }
+
 
 long microsecondsToInches(long microseconds)
 {
